@@ -1,13 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:gravity="center_horizontal"
     tools:context="nyc.c4q.helenchan.finalpractical.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profilepic_iv"
+            android:layout_width="@dimen/profile_main_image"
+            android:layout_height="@dimen/profile_main_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/profile_image_margin_below"
+            android:src="@drawable/chinchibi" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</LinearLayout>
+        android:layout_below="@id/profile_layout"
+        android:gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/heart_button"
+            android:layout_width="@dimen/profile_imagebutton_size"
+            android:layout_height="@dimen/profile_imagebutton_size"
+            android:layout_margin="@dimen/profile_ib_margins"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="@dimen/profile_imagebutton_size"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heart_button"
+            android:layout_marginBottom="@dimen/profile_ib_margins"
+            android:layout_marginRight="@dimen/profile_ib_margins" />
+
+
+        <ImageButton
+            android:id="@+id/mail_button"
+            android:layout_width="@dimen/profile_imagebutton_size"
+            android:layout_height="@dimen/profile_imagebutton_size"
+            android:layout_margin="@dimen/profile_ib_margins"
+            android:layout_toRightOf="@id/heart_button"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="@dimen/profile_imagebutton_size"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mail_button"
+            android:layout_marginBottom="@dimen/profile_ib_margins"
+            android:layout_marginRight="@dimen/profile_ib_margins" />
+
+        <ImageButton
+            android:id="@+id/share_button"
+            android:layout_width="@dimen/profile_imagebutton_size"
+            android:layout_height="@dimen/profile_imagebutton_size"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/profile_ib_margins"
+            android:layout_toRightOf="@id/mail_button"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="@dimen/profile_imagebutton_size"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/share_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/profile_ib_margins"
+            android:layout_marginRight="@dimen/profile_ib_margins" />
+
+        <ImageButton
+            android:id="@+id/logout_button"
+            android:layout_width="@dimen/profile_imagebutton_size"
+            android:layout_height="@dimen/profile_imagebutton_size"
+            android:layout_margin="@dimen/profile_ib_margins"
+            android:layout_toRightOf="@id/share_button"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="@dimen/profile_imagebutton_size"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logout_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/profile_ib_margins" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

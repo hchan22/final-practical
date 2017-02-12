@@ -12,7 +12,7 @@ import android.widget.Toast;
  * Created by helenchan on 2/12/17.
  */
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     EditText userNameET;
     EditText passwordET;
     Button submitButton;
@@ -24,24 +24,33 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         initialize();
     }
 
-    public void initialize(){
+    public void initialize() {
         userNameET = (EditText) findViewById(R.id.username_edittext);
         passwordET = (EditText) findViewById(R.id.password_edittext);
         submitButton = (Button) findViewById(R.id.submit_button);
+        submitButton.setOnClickListener(this);
+    }
+
+    public boolean isEmpty(EditText editText) {
+        if (editText.getText().toString().length() == 0) {
+            return true;
+        }
+        return false;
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.submit_button:
-                if(userNameET.getText() == null){
+                if (isEmpty(userNameET)) {
                     Toast.makeText(getApplicationContext(), "Enter a username", Toast.LENGTH_SHORT).show();
-                }
-                if(passwordET.getText() == null){
+                } else if (isEmpty(passwordET)) {
                     Toast.makeText(getApplicationContext(), "Enter a password", Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
                 }
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+                break;
         }
     }
 }
