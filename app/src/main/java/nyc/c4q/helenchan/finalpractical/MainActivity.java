@@ -8,7 +8,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,11 +21,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageButton messageButton;
     private ImageButton settingsButton;
     private ImageButton logoutButton;
-    private TextView heartTV;
-    private TextView messageTV;
-    private TextView settingsTV;
-    private TextView logoutTV;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         settingsButton.setOnClickListener(this);
         logoutButton = (ImageButton) findViewById(R.id.logout_button);
         logoutButton.setOnClickListener(this);
-        heartTV = (TextView) findViewById(R.id.heart_tv);
-        messageTV = (TextView) findViewById(R.id.message_tv);
-        settingsTV = (TextView) findViewById(R.id.settings_tv);
-        logoutTV =(TextView) findViewById(R.id.logout_tv);
     }
 
 
@@ -70,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.logout_button:
+                makeToast("Selected Logout Activity");
                 finish();
                 break;
         }

@@ -7,6 +7,7 @@
     <string name="mail">Message</string>
     <string name="share">Settings</string>
     <string name="close">Logout</string>
+    <string name="settings">Setting - #</string>
 
     <string-array name="drawer_array">
         <item>Heart Activity</item>

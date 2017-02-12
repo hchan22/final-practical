@@ -10,7 +10,7 @@
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:background="@color/top_nav_color"
-        android:src="@drawable/close"/>
+        android:src="@drawable/cellphone"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/drawer_recyclerview"
