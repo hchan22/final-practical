@@ -20,7 +20,7 @@ public class SettingsIntViewHolder extends RecyclerView.ViewHolder {
         currentString = currentString.substring(0 , currentString.length() -2);
         StringBuilder builder = new StringBuilder();
         builder.append(currentString);
-        builder.append(position);
+        builder.append(position.toString());
 
         intNumTextView.setText(builder.toString());
     }

@@ -20,7 +20,6 @@ public class DrawerViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         drawerIconIV = (ImageView) itemView.findViewById(R.id.drawer_icon_iv);
         drawerTextV = (TextView) itemView.findViewById(R.id.drawer_rv_textview);
-
     }
 
 
@@ -34,14 +33,14 @@ public class DrawerViewHolder extends RecyclerView.ViewHolder {
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switch(s) {
+                switch (s) {
                     case "Settings Activity":
                         Intent intent = new Intent(itemView.getContext(), SettingsActivity.class);
                         itemView.getContext().startActivity(intent);
                         break;
 
                     case "Logout":
-                        ((MainActivity)itemView.getContext()).finish();
+                        ((MainActivity) itemView.getContext()).finish();
 
                     default:
                         Toast.makeText(itemView.getContext(), "Selected " + s, Toast.LENGTH_SHORT).show();
