@@ -4,14 +4,14 @@
     <string name="password">Password</string>
     <string name="submit">Submit</string>
     <string name="heart">Heart</string>
-    <string name="mail">Mail</string>
-    <string name="share">Share</string>
-    <string name="close">Close</string>
+    <string name="mail">Message</string>
+    <string name="share">Settings</string>
+    <string name="close">Logout</string>
 
     <string-array name="drawer_array">
         <item>Heart Activity</item>
-        <item>Mail Activity</item>
-        <item>Share Activity</item>
+        <item>Message Activity</item>
+        <item>Settings Activity</item>
         <item>Logout</item>
 
     </string-array>

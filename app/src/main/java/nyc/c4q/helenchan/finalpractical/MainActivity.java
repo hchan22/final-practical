@@ -5,14 +5,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     List<String> drawerList = new ArrayList<>();
-    RecyclerView drawerRV;
+    private RecyclerView drawerRV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,4 +27,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick(View view) {
+
+    }
 }

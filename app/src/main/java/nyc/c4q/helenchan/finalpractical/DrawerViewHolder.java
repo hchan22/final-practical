@@ -1,5 +1,6 @@
 package nyc.c4q.helenchan.finalpractical;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -26,10 +27,25 @@ public class DrawerViewHolder extends RecyclerView.ViewHolder {
     public void bind(final String s) {
         drawerTextV.setText(s);
         setImageIcon(s);
+        drawerOnClick(s);
+    }
+
+    private void drawerOnClick(final String s) {
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(itemView.getContext(), "Selected " + s, Toast.LENGTH_SHORT).show();
+                switch(s) {
+                    case "Settings Activity":
+                        Intent intent = new Intent(itemView.getContext(), SettingsActivity.class);
+                        itemView.getContext().startActivity(intent);
+                        break;
+
+                    case "Logout":
+                        ((MainActivity)itemView.getContext()).finish();
+
+                    default:
+                        Toast.makeText(itemView.getContext(), "Selected " + s, Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -42,13 +58,13 @@ public class DrawerViewHolder extends RecyclerView.ViewHolder {
                         .fit()
                         .into(drawerIconIV);
                 break;
-            case "Mail Activity":
+            case "Message Activity":
                 Picasso.with(itemView.getContext())
                         .load(R.drawable.googlechrome)
                         .fit()
                         .into(drawerIconIV);
                 break;
-            case "Share Activity":
+            case "Settings Activity":
                 Picasso.with(itemView.getContext())
                         .load(R.drawable.sharevariant)
                         .fit()
