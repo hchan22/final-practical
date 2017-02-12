@@ -13,9 +13,9 @@ import android.widget.Toast;
  */
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText userNameET;
-    EditText passwordET;
-    Button submitButton;
+    private EditText userNameET;
+    private EditText passwordET;
+    private Button submitButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
