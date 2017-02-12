@@ -1,9 +1,11 @@
-package nyc.c4q.helenchan.finalpractical;
+package nyc.c4q.helenchan.finalpractical.settings_recyclerview;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import nyc.c4q.helenchan.finalpractical.R;
 
 /**
  * Created by helenchan on 2/12/17.

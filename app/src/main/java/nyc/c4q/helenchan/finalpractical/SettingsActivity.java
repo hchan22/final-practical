@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import nyc.c4q.helenchan.finalpractical.settings_recyclerview.SettingsIntAdapter;
+
 /**
  * Created by helenchan on 2/12/17.
  */

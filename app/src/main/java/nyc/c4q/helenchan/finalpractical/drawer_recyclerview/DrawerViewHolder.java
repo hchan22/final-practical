@@ -1,4 +1,4 @@
-package nyc.c4q.helenchan.finalpractical;
+package nyc.c4q.helenchan.finalpractical.drawer_recyclerview;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
+
+import nyc.c4q.helenchan.finalpractical.MainActivity;
+import nyc.c4q.helenchan.finalpractical.R;
+import nyc.c4q.helenchan.finalpractical.SettingsActivity;
 
 /**
  * Created by helenchan on 2/12/17.
